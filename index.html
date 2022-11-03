@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+    <main class="grid">
+        <div class="container grid">
+            <!-- Cards -->
+            <div class="cards grid" role="region">
+                <!-- frond card -->
+                <div class="frond-card ">
+                    <header class="card-header">
+                        <img src="images/card-logo.svg" alt="card logo">
+                    </header>
+                    <img src="images/bg-card-front.png" alt="frond card template">
+                    <div class="cardbody flex">
+                        <h1 class="card-number"> 0000 0000 0000 0000</h1>
+                        <p class="owner-name">Jane Appleseed</p>
+                        <p class="exp-date"><span class="month">00</span>/<span class="year">00</span></p>
+                    </div>
+                </div>
+                <!-- back card -->
+                <div class="back-card">
+                    <img src="images/bg-card-back.png" alt="back-card card template">
+                    <p class="card-code"> 000</p>
+                </div>
+            </div>
+            <!-- card form -->
+            <form action="#" class="form" >
+                <label for="name" class="color-dark">Cardholder Name</label>
+                <input type="text" name="u_name" id="name" placeholder="e.g. Jane Appleseed" >
+                <p class="error-msg"></p>
+                <label for="cardNumber" class="color-dark">Card Number</label>
+                <input type="text" name="c_number" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000">
+                <p class="error-msg"></p>
+                <div class="card-data flex">
+                    <div class="exp-date">
+                        <p class="color-dark">Exp. Date (<label for="expMonth">MM</label>/<label for="expYear">YY</label>)</p>
+                        <input type="text" name="month" id="expMonth" placeholder="MM"><input type="text" id="expYear" name="year" placeholder="YY">
+                        <p class="error-msg"></p>
+                    </div>
+                    <div class="cvc flex color-dark">
+                        <label for="securityCard">CVC</label>
+                        <input type="text" name="cvc" id="securityCard" placeholder="e.g. 123" >
+                        <p class="error-msg"></p>
+                    </div>
+                </div>
+                <input type="button"  value="Confirm" class="btn">
+            </form>
+            <!-- succes message -->
+            <section class="success">
+                <header class="succes-header">
+                    <figure class="image-container">
+                        <img src="/images/icon-complete.svg" alt="check icon" class="img-success">
+                        <h2>thank you!</h2>
+                    </figure>
+                </header>
+                <div class="success-body">
+                    <p class="success-text">We've added your card details</p>
+                    <input type="button"  value="Continue" class="btn">
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="js/js.js"></script>
+</body>
+</html>
