@@ -75,6 +75,7 @@ function confirm(){
             if(i == 3 || i == 4){
                 errors[i-1].innerHTML = "Can't be blank";
                 errors[i-1].style.display="block";
+                response = false;
                 continue
             }
             errors[i].innerHTML = "Can't be blank";
@@ -98,6 +99,7 @@ function confirm(){
             if(i == 3 || i == 4){
                 errors[i-1].innerHTML = "Wrong format, numbers only";
                 errors[i-1].style.display="block";
+                response = false;
                 continue
             }
             errors[i].innerHTML = "Wrong format, numbers only";
@@ -115,6 +117,7 @@ function confirm(){
             if(i == 3 || i == 4){
                 errors[i-1].innerHTML = `Wrong format, must be ${minNumber[i-1]} digits`;
                 errors[i-1].style.display="block";
+                response = false;
                 continue
             }
             errors[i].innerHTML = `Wrong format, must be ${minNumber[i-1]} digits`;
